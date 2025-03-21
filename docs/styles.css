@@ -33,12 +33,12 @@ blockquote {
 .image, .portraits {
     display: flex;
     justify-content: center;
+    text-align: center;
     font-size: 12px;
 }
 
 .portraits figure {
     width: 248px;
-    text-align: center;
 }
 
 .portraits img {
