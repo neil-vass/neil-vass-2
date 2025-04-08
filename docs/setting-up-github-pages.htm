@@ -8,14 +8,40 @@
         <div class="container">
             <div class="content">
                 <h1>Setting up GitHub pages</h1>
-                <p>As part of of "<a href="./index.htm#the-story-so-far">The story so far</a>" I was looking for an easy way to get one static page at the <a href="./registering-a-domain-name.htm">neil-vass-2.com domain I registered</a>, so you can see "Hello, World!" when you go to that URL. What's an easy way to do that?</p>
-                <p>Did you know? You don't even need HTML for this - a text file with those words in it would work fine. Looking at that in a web browser's inspector tools show that the basic HTML wrapping gets assumed.</p>
+                <p>As part of of "<a href="./index.htm#the-story-so-far">The story so far</a>" I was looking for a  way to get one static page at the <a href="./registering-a-domain-name.htm">neil-vass-2.com domain I registered</a>, so you can see "Hello, World!" when you go to that URL. What's an easy way to do that?</p>
+                <p>Web pages are written using hypertext markup language (HTML), but you don't need any HTML for something this simple - a text file with those words in it would work fine. Looking at that in a web browser's inspector tools show that the basic HTML wrapping gets assumed.</p>
                 <div class="image">
                     <figure>
-                        <img src="images/hello-world-plain-text.png" alt="Screenshot of a web page showing a Hello, World message. The browser address is 127.0.0.1. The browser dev tools are open and show the Hello World text wrapped in HTML and body tags." width="512" height="288">
+                        <img src="images/hello-world-plain-text.png" alt="Screenshot of a web page showing a Hello, World message. The browser address is 127.0.0.1. The browser dev tools are open and show the Hello World text wrapped in HTML and body tags." width="800" height="446">
                         <figcaption>Looking at a plain text file on my local machine with <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">VS Code's "live server" extension</a>.</figcaption>
                     </figure>
                 </div>
+
+                <p>To serve that page up to any browser that asks for it, <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages">GitHub pages</a> looks straightforward. I'm already used to keeping files for any kind of work in GitHub to keep it backed up, shareable, and get version history, so I'd expect to put the files for this website in there. I haven't used GitHub pages before, but from a quick look:</p>
+                <ul>
+                    <li>Can put HTML, CSS and JS files in a repo, and they'll get served up</li>
+                    <li>Can use a custom domain (that is, I can get this site to serve up its content to neil-vass-2.com)</li>
+                    <li>Can add a build process (uses Jekyll by default, can change it)</li>
+                    <li>Has various limitations that might affect me in future … but nothing to worry about right now, I'll start here and move if those become important.</li>
+                </ul>
+                <p>This seems like a good place to start.</p>
+                
+                <h2>So, how do I set this up?</h2>
+            
+                <ul>
+                    <li>The <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site">Getting Started</a> guide is straightforward</li>
+                    <li>I need to choose a <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#types-of-github-pages-sites">type of site</a>: I think <code>project</code> is the right choice.</li>
+                    <li>Set it up to publish from the main branch, in the /docs folder</li>
+                    <li>I'll give it just a text file to try serving it up!</li>
+                </ul>
+
+                <div class="image">
+                    <figure>
+                        <img src="images/github-pages-setup-01.png" alt="Screenshot of the github interface, showing a hello world text file named index.htm in a neil vass 2 repo." width="800" height="264">
+                        <figcaption>Just one static page to start with.</figcaption>
+                    </figure>
+                </div>
+
             </div>
         </div>
     </body>
