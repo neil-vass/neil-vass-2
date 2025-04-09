@@ -42,6 +42,33 @@
                     </figure>
                 </div>
 
+                <p>Deploying isn't as fast a feedback loop as I'd like - a note says "it can take up to 10 minutes for changes to yur site to publish after you push the changes to GitHub. If you don't see your GitHub Pages changes reflected in your browser after an hour..."</p>
+
+                <p>But in this case, after just a couple of minutes I could go to the default public web address <a href="http://neil-vass.github.io/neil-vass-2/">http://neil-vass.github.io/neil-vass-2/</a> and my "Hello, World!" page was there, live to the world! I made a quick edit to add some HTML tags to that bare text file, just to check updates work. All looking good.</p>
+
+                <div class="image">
+                    <figure>
+                        <img src="images/github-pages-setup-02.png" alt="Screenshot of the github interface, showing some files in the background and a message about build and deployment. It says started, and some checks haven't completed yet." width="800" height="284">
+                        <figcaption>When file changes are committed, the site automatically redeploys to the web.</figcaption>
+                    </figure>
+                </div>
+
+                <h2>Using my custom domain</h2>
+
+                <p>I <a href="./registering-a-domain-name.htm">registered the neil-vass-2.com domain</a>, let's use it. The GitHub Pages docs have <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages">notes on how to do that</a>. The recommended first step is to <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages">verify that domain</a>, otherwise there's some cases where anyone could publish their GitHub Pages site to my domain - that sounds a wise precaution so I did that first.</p>
+
+                <p>Next, <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">set and check some DNS records, and set the site in GitHub Pages to use a custom domain</a>. All done in just a few moments!</p>
+
+                <div class="image">
+                    <figure>
+                        <img src="images/github-pages-setup-03.png" alt="Screenshot of the github interface, showing the custom domain being set, a green tick with a DNS check successful message, and a box saying the TLS certificate is being provisioned." width="800" height="352">
+                        <figcaption>Just a few clear steps, with updates and confirmation it's all working.</figcaption>
+                    </figure>
+                </div>
+
+                <p>And with one checkbox, I can set "Enforce HTTPS" so we don't get anyone using HTTP and seeing browser warnings. That was all very easy. Done!</p>
+
+            
             </div>
         </div>
     </body>
