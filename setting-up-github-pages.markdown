@@ -1,10 +1,7 @@
 ---
 layout: default
-title: Types of learning
+title: Setting up GitHub pages
 ---
-
-Setting up GitHub pages
-=======================
 
 As part of of "[The story so far](./index.markdown#the-story-so-far)" I was looking for a  way to get one static page at the [neil-vass-2.com domain I registered](./registering-a-domain-name.markdown), so you can see "Hello, World!" when you go to that URL. What's an easy way to do that?
 

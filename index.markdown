@@ -1,10 +1,7 @@
 ---
 layout: default
-title: Neil Vass 2
+title: Just one static page
 ---
-
-Just one static page
-====================
 
 I've been blogging at [neil-vass.com](https://neil-vass.com) for a few years, but recently decided to try starting this second site. For more background, see [Blogging about blogging, just this once](https://neil-vass.com/blogging-about-blogging-just-this-once/) over on the main blog.
 

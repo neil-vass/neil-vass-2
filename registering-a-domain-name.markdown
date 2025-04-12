@@ -3,9 +3,6 @@ layout: default
 title: Registering a domain name
 ---
 
-Registering a domain name
-=========================
-
 As part of "[The story so far](./index.markdown#the-story-so-far)" in setting up this site, I registered the neil-vass-2.com domain name. This was fairly simple:
 
 *   Went to [123-reg.co.uk](https://123-reg.co.uk) (a domain name registrar)

@@ -3,9 +3,6 @@ layout: default
 title: Running a site from my laptop
 ---
 
-Running a site from my laptop
-=============================
-
 As part of "[The story so far](./index.markdown#the-story-so-far)", I wondered how easy it might be to serve a website from my own computer. I've [registered the neil-vass-2.com domain name](./registering-a-domain-name.markdown), can I keep HTML files on my laptop and let the world see them?
 
 This is how the world wide web got started: Long before there were helpful hosting companies or cloud computing services, the very first web page was served from Tim Berners-Lee's [NeXT computer on a desk where he worked at CERN](https://www.sciencemuseum.org.uk/objects-and-stories/world-wide-web-global-information-space). He put a helpful sticker on it ("This machine is a server DO NOT POWER IT DOWN!!") to make sure the world wide web didn't unexpectedly disappear.
