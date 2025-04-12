@@ -1,0 +1,47 @@
+body {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    width: 800px;
+    padding: 10px;
+    flex-basis: 1 1 auto;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+
+h2, h3 {
+    line-height: 1.5;
+    margin-top: 36px;
+    margin-bottom: 8px;
+}
+
+blockquote {
+    border-left: 1px black solid;
+    padding-left: 2em;
+    margin: 2em;
+}
+
+.image, .portraits {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+}
+
+.portraits figure {
+    width: 248px;
+}
+
+.portraits img {
+    box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.75);
+    margin-bottom: 4px;
+}
