@@ -51,7 +51,7 @@ I'm expecting learning to be fun - I enjoy seeing how things work and it's satis
 The story so far
 ----------------
 
-You're reading this on [neil-vass.com](https://neil-vass.com) so I've definitely made some progress on getting a new site in place! So far I have...
+You're reading this on [neil-vass-2.com](https://neil-vass-2.com) so I've definitely made some progress on getting a new site in place! So far I have...
 *   [Registered a domain name](./registering-a-domain-name.markdown)
 *   [Looked at running it off my laptop](./running-a-site-from-my-laptop.htm) (is _that_ the simplest next step?)
 *   [Set up GitHub pages to host the site](./setting-up-github-pages.htm)
