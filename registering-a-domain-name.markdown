@@ -37,13 +37,15 @@ For me personally, the timing of where this came from is fascinating: ICANN was 
 
 In earlier times, [John Postel](https://en.wikipedia.org/wiki/Jon_Postel), instrumental to lots of things in how the Internet works, started off the list of assigned network addresses in a paper notebook. [Elizabeth "Jake" Feinler](https://en.wikipedia.org/wiki/Elizabeth_J._Feinler) ran the Network Information Centre (NIC), which manually maintained a single HOSTS.TXT file, mapping hostnames to addresses, that everyone online copied to their computers a few times a week. People could phone or post physical letters to the NIC to get the hosts list updated or to ask questions about the network.
 
-![Photo of a man with long hair and beard, and 1970s style glasses](assets/images/Jon_Postel.jpg)
+<div class="portraits">
+  {% figure caption: "By Carl Malamud - Flickr: [Jon Postel, CC BY 2.0](https://commons.wikimedia.org/w/index.php?curid=126745740)" %}
+  ![Photo of a man with long hair and beard, and 1970s style glasses](assets/images/Jon_Postel.jpg){:width="248" height="358"}
+  {% endfigure %}
 
-By Carl Malamud - Flickr: [Jon Postel, CC BY 2.0](https://commons.wikimedia.org/w/index.php?curid=126745740)
-
-![Photo of a woman with curly hair, glasses, and a pearl necklace](assets/images/Elizabeth_Feinler.jpg)
-
-By Elizabeth Feinler - [Elizabeth Feinler, CC BY-SA 3.0](https://commons.wikimedia.org/w/index.php?curid=14983224)
+  {% figure caption: "By Elizabeth Feinler - [Elizabeth Feinler, CC BY-SA 3.0](https://commons.wikimedia.org/w/index.php?curid=14983224)" %}
+  ![Photo of a woman with curly hair, glasses, and a pearl necklace](assets/images/Elizabeth_Feinler.jpg){:width="246" height="358"}
+  {% endfigure %}
+</div>
 
 As they realised how fast things were growing and how unmaintainable these processes were, these two plus lots of others were instrumental in designing the more automated systems we all use today. It's amazing how far we've come in just a few decades.
 
