@@ -47,7 +47,7 @@ Hit CTRL-C to stop the server
 
 And that's it - with various sensible default options, I'm serving up a website!
 
-This will work for anyone using my home WiFi, who goes to those web addresses (the IP address and port number rather than a nice name like [https://neil-vass-2.com](https://neil-vass-2.com)). Making that work, publicly, would need a few more steps:
+This will work for anyone using my home WiFi, who goes to those web addresses (the IP address and port number rather than a nice name like <https://neil-vass-2.com>). Making that work, publicly, would need a few more steps:
 
 *   Change my home network settings to allow outside requests on certain ports (not too tricky)
 *   Get a persistent, public address for it (that IP address from my Internet Service Provider will keep changing)
