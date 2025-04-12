@@ -18,7 +18,7 @@ Now, I have a 123-reg account where I can manage various things about this domai
 Learning
 --------
 
-I could get away with no learning at all, the sites where you can register a domain all guide you through the steps - but it is interesting knowing how things work behind the scenes. This is mostly type 1 learning from [my made-up list of types](./types-of-learning.htm) - I mostly remember what the system is, and I don't think anything's changed in many years.
+I could get away with no learning at all, the sites where you can register a domain all guide you through the steps - but it is interesting knowing how things work behind the scenes. This is mostly type 1 learning from [my made-up list of types](./types-of-learning.markdown) - I mostly remember what the system is, and I don't think anything's changed in many years.
 
 ### What does it mean to "register" a domain?
 
