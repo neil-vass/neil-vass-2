@@ -30,11 +30,14 @@ blockquote {
     margin: 2em;
 }
 
-.image, .portraits {
-    display: flex;
-    justify-content: center;
+figure:has(img) {
     text-align: center;
     font-size: 12px;
+}
+
+.portraits {
+    display: flex;
+    justify-content: center;
 }
 
 .portraits figure {
