@@ -44,6 +44,6 @@ The story so far
 
 You're reading this on [neil-vass-2.com](https://neil-vass-2.com) so I've definitely made some progress on getting a new site in place! So far I have...
 *   [Registered a domain name](./registering-a-domain-name.markdown)
-*   [Looked at running it off my laptop](./running-a-site-from-my-laptop.htm) (is _that_ the simplest next step?)
-*   [Set up GitHub pages to host the site](./setting-up-github-pages.htm)
+*   [Looked at running it off my laptop](./running-a-site-from-my-laptop.markdown) (is _that_ the simplest next step?)
+*   [Set up GitHub pages to host the site](./setting-up-github-pages.markdown)
 *   (Re)learned enough HTML and CSS to write these pages you're reading
