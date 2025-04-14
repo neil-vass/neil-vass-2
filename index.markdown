@@ -3,6 +3,8 @@ layout: default
 title: Just one static page
 ---
 
+**Rebuilding with GitHub Actions**
+
 I've been blogging at [neil-vass.com](https://neil-vass.com) for a few years, but recently decided to try starting this second site. For more background, see [Blogging about blogging, just this once](https://neil-vass.com/blogging-about-blogging-just-this-once/) over on the main blog.
 
 That post ended with a summary of my aims for this new site:
