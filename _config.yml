@@ -27,7 +27,6 @@ url: "https://neil-vass-2.com" # the base hostname & protocol for your site, e.g
 permalink: /:title
 
 # Build settings
-theme: minima
 plugins:
   - jekyll-feed
   - jekyll-figure
