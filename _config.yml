@@ -30,6 +30,10 @@ permalink: /:title
 plugins:
   - jekyll-feed
   - jekyll-figure
+  - jekyll-relative-links
+
+relative_links:
+  collections: true
 
 jekyll-figure:
   paragraphs: false

@@ -1,9 +1,10 @@
 ---
 layout: default
 title: Registering a domain name
+date: 2025-04-14 16:00:00 +0100
 ---
 
-As part of "[The story so far](./index.markdown#the-story-so-far)" in setting up this site, I registered the neil-vass-2.com domain name. This was fairly simple:
+As part of "[The story so far](../index.markdown#the-story-so-far)" in setting up this site, I registered the neil-vass-2.com domain name. This was fairly simple:
 
 *   Went to [123-reg.co.uk](https://123-reg.co.uk) (a domain name registrar)
 *   Searched for the domain I wanted, found it's available
@@ -15,7 +16,7 @@ Now, I have a 123-reg account where I can manage various things about this domai
 Learning
 --------
 
-I could get away with no learning at all, the sites where you can register a domain all guide you through the steps - but it is interesting knowing how things work behind the scenes. This is mostly type 1 learning from [my made-up list of types](./types-of-learning.markdown) - I mostly remember what the system is, and I don't think anything's changed in many years.
+I could get away with no learning at all, the sites where you can register a domain all guide you through the steps - but it is interesting knowing how things work behind the scenes. This is mostly type 1 learning from [my made-up list of types](/types-of-learning.markdown) - I mostly remember what the system is, and I don't think anything's changed in many years.
 
 ### What does it mean to "register" a domain?
 
@@ -36,11 +37,11 @@ In earlier times, [John Postel](https://en.wikipedia.org/wiki/Jon_Postel), instr
 
 <div class="portraits">
   {% figure caption: "By Carl Malamud - Flickr: [Jon Postel, CC BY 2.0](https://commons.wikimedia.org/w/index.php?curid=126745740)" %}
-  ![Photo of a man with long hair and beard, and 1970s style glasses](assets/images/Jon_Postel.jpg){:width="248" height="358"}
+  ![Photo of a man with long hair and beard, and 1970s style glasses](/assets/images/Jon_Postel.jpg){:width="248" height="358"}
   {% endfigure %}
 
   {% figure caption: "By Elizabeth Feinler - [Elizabeth Feinler, CC BY-SA 3.0](https://commons.wikimedia.org/w/index.php?curid=14983224)" %}
-  ![Photo of a woman with curly hair, glasses, and a pearl necklace](assets/images/Elizabeth_Feinler.jpg){:width="246" height="358"}
+  ![Photo of a woman with curly hair, glasses, and a pearl necklace](/assets/images/Elizabeth_Feinler.jpg){:width="246" height="358"}
   {% endfigure %}
 </div>
 

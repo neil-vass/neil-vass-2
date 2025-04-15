@@ -1,14 +1,15 @@
 ---
 layout: default
 title: Running a site from my laptop
+date: 2025-04-14 16:01:00 +0100
 ---
 
-As part of "[The story so far](./index.markdown#the-story-so-far)", I wondered how easy it might be to serve a website from my own computer. I've [registered the neil-vass-2.com domain name](./registering-a-domain-name.markdown), can I keep HTML files on my laptop and let the world see them?
+As part of "[The story so far](../index.markdown#the-story-so-far)", I wondered how easy it might be to serve a website from my own computer. I've [registered the neil-vass-2.com domain name](./2025-14-10-registering-a-domain-name.markdown), can I keep HTML files on my laptop and let the world see them?
 
 This is how the world wide web got started: Long before there were helpful hosting companies or cloud computing services, the very first web page was served from Tim Berners-Lee's [NeXT computer on a desk where he worked at CERN](https://www.sciencemuseum.org.uk/objects-and-stories/world-wide-web-global-information-space). He put a helpful sticker on it ("This machine is a server DO NOT POWER IT DOWN!!") to make sure the world wide web didn't unexpectedly disappear.
 
 {% figure caption:"[Binary Koala from Berlin / Saint-Petersburg, TCP/IP](https://commons.wikimedia.org/wiki/File:This_Machine_is_a_server_DO_NOT_POWER_IT_DOWN!!_-_London_Science_Museum,_2015-03-19_(by_Binary_Koala).jpg), [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0), via Wikimedia Commons" %}
-![Photo of a desktop computer with a handwritten sticker, partly scraped off.](assets/images/512px-This_Machine_is_a_server_DO_NOT_POWER_IT_DOWN!!_-_London_Science_Museum,_2015-03-19_(by_Binary_Koala).jpg){:width="512" height="288"}
+![Photo of a desktop computer with a handwritten sticker, partly scraped off.](/assets/images/512px-This_Machine_is_a_server_DO_NOT_POWER_IT_DOWN!!_-_London_Science_Museum,_2015-03-19_(by_Binary_Koala).jpg){:width="512" height="288"}
 {% endfigure %}
 
 
