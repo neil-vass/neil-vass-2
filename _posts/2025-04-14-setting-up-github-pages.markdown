@@ -4,7 +4,7 @@ title: Setting up GitHub pages
 date: 2025-04-14 16:02:00 +0100
 ---
 
-As part of "[The story so far](../index.markdown#the-story-so-far)" I was looking for a  way to get one static page at the [neil-vass-2.com domain I registered](./2025-14-10-registering-a-domain-name.markdown), so you can see "Hello, World!" when you go to that URL. What's an easy way to do that?
+As part of "[The story so far](../index.markdown#the-story-so-far)" I was looking for a  way to get one static page at the [neil-vass-2.com domain I registered](./2025-04-14-registering-a-domain-name.markdown), so you can see "Hello, World!" when you go to that URL. What's an easy way to do that?
 
 Web pages are written using hypertext markup language (HTML), but you don't need any HTML for something this simple - a text file with those words in it would work fine. Looking at that in a web browser's inspector tools show that the basic HTML wrapping gets assumed.
 

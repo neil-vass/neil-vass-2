@@ -40,7 +40,7 @@ The story so far
 ----------------
 
 You're reading this on [neil-vass-2.com](https://neil-vass-2.com) so I've definitely made some progress on getting a new site in place! So far I have...
-*   [Registered a domain name](./_posts/2025-14-10-registering-a-domain-name.markdown)
-*   [Looked at running it off my laptop](./_posts/2025-14-10-running-a-site-from-my-laptop.markdown) (is _that_ the simplest next step?)
-*   [Set up GitHub pages to host the site](./_posts/2025-14-10-setting-up-github-pages.markdown)
+*   [Registered a domain name](./_posts/2025-04-14-registering-a-domain-name.markdown)
+*   [Looked at running it off my laptop](./_posts/2025-04-14-running-a-site-from-my-laptop.markdown) (is _that_ the simplest next step?)
+*   [Set up GitHub pages to host the site](./_posts/2025-04-14-setting-up-github-pages.markdown)
 *   (Re)learned enough HTML and CSS to write these pages you're reading
