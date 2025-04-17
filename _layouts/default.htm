@@ -3,6 +3,26 @@
   <head>
     <title>{{ page.title }}</title>
     <link rel='stylesheet' href='/assets/css/styles.css'/>
+
+    <!-- Social cards with open graph and twitter cards -->
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:description" content="{{ page.social_description }}" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:site_name" content="{{ site.title }}" />
+    <meta property="article:published_time" content="{{ page.date }}" />
+    <meta property="og:image" content="{{ site.url }}{{ page.social_image.src }}" />
+    <meta property="og:image:width" content="{{ page.social_image.width }}" />
+    <meta property="og:image:height" content="{{ page.social_image.height }}" />
+    <meta property="og:image:type" content="{{ page.social_image.mimetype }}" />
+    <meta property="og:image:alt" content="{{ page.social_image.alt }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:label1" content="Anything" />
+    <meta name="twitter:data1" content="That I write" />
+    <meta name="twitter:label2" content="Will appear" />
+    <meta name="twitter:data2" content="in these bits" />
+
   </head>
   <body>
     <div class="container">

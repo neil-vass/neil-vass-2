@@ -12,11 +12,25 @@ body {
     padding: 10px;
     flex-basis: 1 1 auto;
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
+h1 {
+    font-size: 3em;
+}
 
+h2 {
+    font-size: 2em;
+}
+
+ul {
+    margin-bottom: 2em;
+}
+
+li {
+    margin-bottom: 0.8em;
+}
 
 h2, h3 {
     line-height: 1.5;
@@ -33,6 +47,8 @@ blockquote {
 figure:has(img) {
     text-align: center;
     font-size: 12px;
+    margin: 0;
+    padding: 2em 0;
 }
 
 .portraits {
