@@ -26,7 +26,7 @@ I've got **lots** to learn about this topic, bear with me...
 
 
 <figure>
-  <img src="/assets/images/xkcd_1513_code_quality.png" width="800" height="279" 
+  <img src="/assets/images/xkcd_1513_code_quality.png" width="100%"
   alt="A 4 panel XKCD comic with two stick figures at a computer. 
   First figure says: Keep in mind that i'm self-taught, so my code may be a little messy. 
   Second figure says: Let me see, I'm sure it's fine... wow. This is like being in a house built by a child using nothing but a hatchet and a picture of a house. It's like a salad recipe written by a corporate lawyer using a phone autocorrect that only knew excel formulas. It's like someone took a transcript of a couple arguing at ikea and made random edits until it compiled without errors.
