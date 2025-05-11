@@ -3,9 +3,9 @@ body {
 }
 
 .content {
-    max-width: 52em;
+    max-width: 42em;
     min-width: 28em;
-    padding: 15px;
+    padding: 150px;
     margin: 0 auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 18px;
