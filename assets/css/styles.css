@@ -1,5 +1,7 @@
 body {
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 113%;
 }
 
 .content {
@@ -7,56 +9,55 @@ body {
     min-width: 28ch;
     padding: 15px;
     margin: 0 auto;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 18px;
 }
 
 p {
     line-height: 1.45;
-    margin: 1.5em 0;
+    margin: 0 0 1.5rem 0;
 }
 
 h1 {
-    word-spacing: -0.125em;
-    font-size: 3.5em;
+    word-spacing: -0.125rem;
+    font-size: 3rem;
     font-weight: 400;
+    margin: 1rem 0 1.5rem 0;
 }
 
 h2 {
-    word-spacing: -0.125em;
-    font-size: 2.25em;
+    word-spacing: -0.125rem;
+    font-size: 2rem;
     font-weight: 400;
-    margin: 1.6em 0 0.8em 0;
+    margin: 1.8rem 0 1rem 0;
 }
 
 h3 {
-    word-spacing: -0.125em;
-    font-size: 1.3em;
+    word-spacing: -0.125rem;
+    font-size: 1.3rm;
     font-weight: 400;
-    margin: 1.4em 0 0.4em 0;
+    margin: 1.6rem 0 0.8rem 0;
 }
 
 
 ul {
-    margin-bottom: 2em;
+    margin-bottom: 2rem;
     line-height: 1.45;
 }
 
 li {
-    margin-bottom: 0.8em;
+    margin-bottom: 0.8rem;
 }
 
 blockquote {
     border-left: 1px black solid;
-    padding-left: 2em;
-    margin: 2em;
+    padding-left: 2rem;
+    margin: 2rem;
 }
 
 figure:has(img) {
     text-align: center;
-    font-size: 14px;
+    font-size: 0.8rem;
     margin: 0;
-    padding: 2em 0;
+    padding: 2rem 0;
 }
 
 .portraits {
