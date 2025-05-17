@@ -3,7 +3,7 @@ body {
 }
 
 .content {
-    max-width: 75ch;
+    max-width: 70ch;
     min-width: 28ch;
     padding: 15px;
     margin: 0 auto;
@@ -12,7 +12,7 @@ body {
 }
 
 p {
-    line-height: 1.6;
+    line-height: 1.45;
     margin: 1.5em 0;
 }
 
@@ -39,7 +39,7 @@ h3 {
 
 ul {
     margin-bottom: 2em;
-    line-height: 1.6;
+    line-height: 1.45;
 }
 
 li {
@@ -54,7 +54,7 @@ blockquote {
 
 figure:has(img) {
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
     margin: 0;
     padding: 2em 0;
 }
