@@ -37,11 +37,11 @@ In earlier times, [John Postel](https://en.wikipedia.org/wiki/Jon_Postel), instr
 
 <div class="portraits">
   {% figure caption: "By Carl Malamud - Flickr: [Jon Postel, CC BY 2.0](https://commons.wikimedia.org/w/index.php?curid=126745740)" %}
-  ![Photo of a man with long hair and beard, and 1970s style glasses](/assets/images/Jon_Postel.jpg){:width="248" height="358"}
+  ![Photo of a man with long hair and beard, and 1970s style glasses](/assets/images/Jon_Postel.jpg){:width="100%"}
   {% endfigure %}
 
   {% figure caption: "By Elizabeth Feinler - [Elizabeth Feinler, CC BY-SA 3.0](https://commons.wikimedia.org/w/index.php?curid=14983224)" %}
-  ![Photo of a woman with curly hair, glasses, and a pearl necklace](/assets/images/Elizabeth_Feinler.jpg){:width="246" height="358"}
+  ![Photo of a woman with curly hair, glasses, and a pearl necklace](/assets/images/Elizabeth_Feinler.jpg){:width="100%"}
   {% endfigure %}
 </div>
 

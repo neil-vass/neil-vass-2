@@ -63,10 +63,11 @@ figure:has(img) {
 .portraits {
     display: flex;
     justify-content: space-around;
+    width: 100%;
 }
 
 .portraits figure {
-    width: 248px;
+    width: 40%;
 }
 
 .portraits img {

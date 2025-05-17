@@ -52,7 +52,7 @@ The Odin Project gives a short intro to each topic, with some questions and chal
 From [The Odin Project itself](https://www.theodinproject.com/lessons/foundations-landing-page): use everything you've learned so far to create a page that looks just like [this picture](https://cdn.statically.io/gh/TheOdinProject/curriculum/81a5d553f4073e593d23a6ab00d50eef8620796d/foundations/html_css/project/imgs/01.png).
 
 <figure>
-  <img src="/assets/images/odin-project-assignment.png" width="400" height="531" alt="Image of a landing page split into various coloured sections, with different text styles and images arranged in different places." />
+  <img src="/assets/images/odin-project-assignment.png" width="100%" alt="Image of a landing page split into various coloured sections, with different text styles and images arranged in different places." />
   <figcaption>A good puzzle that follows from "make exactly this": what should the page look like as you resize the window? This lovely image doesn't say.</figcaption>
 </figure>
 
@@ -63,7 +63,7 @@ Some interesting advice from the [Internetting is Hard](https://internetingishar
 And a very fun Flexbox challenge: [Flexbox Froggy](https://flexboxfroggy.com/)!
 
 <figure>
-  <img src="/assets/images/flexbox-froggy.png" width="600" height="295"
+  <img src="/assets/images/flexbox-froggy.png" width="100%"
   alt="Flexbox froggy page saying Bring the frogs home one last time by using the CSS properties you've learned. A list of CSS properties and a box to enter the CSS for a pond. On the right, various frogs aren't sitting on the correct lily pads." />
   <figcaption>Can you get the frogs onto the correct lily pads?</figcaption>
 </figure>
