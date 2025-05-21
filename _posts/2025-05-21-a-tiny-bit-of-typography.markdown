@@ -18,7 +18,7 @@ As part of “[The story so far](../index.markdown#the-story-so-far)” I [learn
 
 Changing fonts, spacing and other things still left me feeling pages looked like walls of text or distractingly spaced out. Similar amounts of content on my main [neil-vass.com blog](https://neil-vass.com/) or [other sites](https://www.joshwcomeau.com/css/the-importance-of-learning-css/) look much more readable and inviting. This is a topic I’d like to get better at in general: how can I know what’ll look good, or what tweaks to try when I’m not happy with something? Since most of the content right now is text, that means learning a little typography. I know this is a huge topic so I don't expect to get expert in it, but since I’m starting from pretty much zero knowledge a little learning will make a big difference.
 
-Here's a few highlights from the things I looked into, maybe someone else will find them useful too?
+Here’s a few highlights from the things I looked into, maybe someone else will find them useful too?
 
 
 A few online books
@@ -44,9 +44,9 @@ There’s also plenty of interesting background on what some terms mean, and wha
 * “Leading (pronounced ‘ledding’) is so called because, in mechanical presses, strips of lead are placed between lines of type to space the lines apart.” ([2.2.1](http://webtypography.net/2.2.1)).
 
 
-Another book I enjoyed: [Butterick’s Practical Typography](https://practicaltypography.com/), starting with its “[Typography in ten minutes](https://practicaltypography.com/typography-in-ten-minutes.html)” guide and then diving into lots more topics, from big-picture things like [who typography is for](https://practicaltypography.com/who-is-typography-for.html) to very specific details on things like how to set [line spacing](https://practicaltypography.com/line-spacing.html) (including a link to the author's incredibly detailed [Stack Overflow answer](https://stackoverflow.com/questions/20695333/why-does-unitless-line-height-behave-differently-from-percentage-or-em-in-this-e/20818206#20818206) on why you should use no units for line-height in CSS).
+Another book I enjoyed: [Butterick’s Practical Typography](https://practicaltypography.com/), starting with its “[Typography in ten minutes](https://practicaltypography.com/typography-in-ten-minutes.html)” guide and then diving into lots more topics, from big-picture things like [who typography is for](https://practicaltypography.com/who-is-typography-for.html) to very specific details on things like how to set [line spacing](https://practicaltypography.com/line-spacing.html) (including a link to the author’s incredibly detailed [Stack Overflow answer](https://stackoverflow.com/questions/20695333/why-does-unitless-line-height-behave-differently-from-percentage-or-em-in-this-e/20818206#20818206) on why you should use no units for line-height in CSS).
 
-I got lots more understanding about what makes page layout easy or harder to read, and got much happier with this site's layout after playing around with some ideas from it. In other places, I'm intrigued by very strong opinions on things I can initially barely spot the difference between — for example, the author says “I dislike Arial more than Comic Sans. Though it’s the undisputed king of the goofy fonts, Comic Sans is at least honest about what it is. But Arial is merely a bland, zero-calorie Helvetica substitute.”
+I got lots more understanding about what makes page layout easy or harder to read, and got much happier with this site's layout after playing around with some ideas from it. In other places, I’m intrigued by very strong opinions on things I can initially barely spot the difference between — for example, the author says “I dislike Arial more than Comic Sans. Though it’s the undisputed king of the goofy fonts, Comic Sans is at least honest about what it is. But Arial is merely a bland, zero-calorie Helvetica substitute.”
 
 <figure>
   <img src="/assets/images/arial-helvetica-comparison.svg" width="100%"
@@ -68,11 +68,11 @@ After reading lots of strong opinions about font choices, when I found out there
   <figcaption>Posters image from <a href="https://www.hustwit.com/helvetica">Gary Hustwit‘s website</a>, which has lots of background on this film and links to rent or buy it.</figcaption>
 </figure>
 
-This was a fascinating look at how ubiquitous this font is — once you start looking out for it, it‘s everywhere! — and at how all kinds of designers feel about this and other typefaces. A world I had no idea about.
+This was a fascinating look at how ubiquitous this font is — once you start looking out for it, it’s everywhere! — and at how all kinds of designers feel about this and other typefaces. A world I had no idea about.
 
 For shorter videos that I really laughed at, you might like Elle Cordova’s “[Fonts hanging out](https://www.youtube.com/watch?v=j7SByXWWVzU)” and “[Punctuation marks hanging out](https://www.youtube.com/watch?v=ky0YOo7_Y0o)”.
 
-And for some wider ideas about what’s possible with laying out web pages — especially useful once I get past this ”just the article” stage and on to navigation, sidebars, and other complications — I found the Jen Simmons talk “[Everything You Know About Web Design Just Changed](https://www.youtube.com/watch?v=jBwBACbRuGY)” very helpful. It's from 2019 but I feel all caught up on the 30-ish years of web layout history up to that point, and a much better sense of what my options are with the dizzying range of CSS features I've been learning about. Jen has **a lot** of great talks [linked from her site](https://labs.jensimmons.com/).
+And for some wider ideas about what’s possible with laying out web pages — especially useful once I get past this “just the article” stage and on to navigation, sidebars, and other complications — I found the Jen Simmons talk “[Everything You Know About Web Design Just Changed](https://www.youtube.com/watch?v=jBwBACbRuGY)” very helpful. It's from 2019 but I feel all caught up on the 30-ish years of web layout history up to that point, and a much better sense of what my options are with the dizzying range of CSS features I've been learning about. Jen has **a lot** of great talks [linked from her site](https://labs.jensimmons.com/).
 
 <figure>
   <img src="/assets/images/jen-simmons-web-design.png" width="100%"
@@ -84,14 +84,14 @@ And for some wider ideas about what’s possible with laying out web pages — e
 So, did it help?
 ----------------
 
-I started off with no styling at all, just what the browser gives you — and through reading, watching, and trying things out I've changed it into the site you're looking at now. Want to see the difference?
+I started off with no styling at all, just what the browser gives you — and through reading, watching, and trying things out I’ve changed it into the site you’re looking at now. Want to see the difference?
 
 <button class="stylesheet-toggle-button">Toggle stylesheet on/off</button>
 
-[Butterick’s Practical Typography](https://practicaltypography.com/) in particular helped me understand what was making my paragraphs still look like walls of text or weirdly spaced out and got me to this setup I'm very happy with. I haven't implemented all of that book’s advice — the author would still say my headings are too big, and be disappointed I haven’t gone and found a professional font to purchase for the site — I'll keep playing and maybe come back to these. 
+[Butterick’s Practical Typography](https://practicaltypography.com/) in particular helped me understand what was making my paragraphs still look like walls of text or weirdly spaced out and got me to this setup I’m very happy with. I haven’t implemented all of that book’s advice — the author would still say my headings are too big, and be disappointed I haven’t gone and found a professional font to purchase for the site — I’ll keep playing and maybe come back to these. 
 
 Another piece of advice I have, if you'd like to learn about making a site look good on a range of screen sizes: accidentally leave out the viewport meta tag, see your page looks rubbish on your phone, spend an hour reading docs and finding nothing works like you expect … then realize. I now have a nice page and a lot more knowledge of px, em, rem, ch, %, vw, fr, and more.
 
-The next user-facing step will be to add more page elements around these blog posts, but first I’m going to look into something else. Writing bare HTML hasn't been an enormous overhead so far, but it is getting a bit repetitive. And once there's more boilerplate like navigation that's the same on every page, it’ll be very annoying to add and keep updating everywhere as it evolves. Next time: some kind of templating system so I can make post writing be more about just the post content.
+The next user-facing step will be to add more page elements around these blog posts, but first I’m going to look into something else. Writing bare HTML hasn’t been an enormous overhead so far, but it is getting a bit repetitive. And once there's more boilerplate like navigation that's the same on every page, it’ll be very annoying to add and keep updating everywhere as it evolves. Next time: some kind of templating system so I can make post writing be more about just the post content.
 
 <script defer src="/assets/js/stylesheet-toggle.js"></script>
