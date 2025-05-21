@@ -44,3 +44,4 @@ You're reading this on [neil-vass-2.com](https://neil-vass-2.com) so I've defini
 *   [Looked at running it off my laptop](./_posts/2025-04-14-running-a-site-from-my-laptop.markdown) (is _that_ the simplest next step?)
 *   [Set up GitHub pages to host the site](./_posts/2025-04-14-setting-up-github-pages.markdown)
 *   [(Re)learned enough HTML and CSS to write these pages you're reading](./_posts/2025-04-17-learning-just-enough-html-and-css.markdown)
+*   [Learned a tiny bit of typography](./_posts/2025-05-21-a-tiny-bit-of-typography.markdown), to make posts more readable

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: A tiny bit of typography
-date: 2025-04-17 14:49:45 +0100
+date: 2025-05-21 17:34:46 +0100
 
 social_description: "“How do I make this page of writing more readable” turned out to be a good question."
 
