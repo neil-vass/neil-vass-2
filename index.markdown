@@ -39,9 +39,10 @@ I'm expecting learning to be fun - I enjoy seeing how things work and it's satis
 The story so far
 ----------------
 
-You're reading this on [neil-vass-2.com](https://neil-vass-2.com) so I've definitely made some progress on getting a new site in place! So far I have...
+You're reading this on [neil-vass-2.com](https://neil-vass-2.com) so I've definitely made some progress on getting a new site in place! So far I have…
 *   [Registered a domain name](./_posts/2025-04-14-registering-a-domain-name.markdown)
 *   [Looked at running it off my laptop](./_posts/2025-04-14-running-a-site-from-my-laptop.markdown) (is _that_ the simplest next step?)
 *   [Set up GitHub pages to host the site](./_posts/2025-04-14-setting-up-github-pages.markdown)
 *   [(Re)learned enough HTML and CSS to write these pages you're reading](./_posts/2025-04-17-learning-just-enough-html-and-css.markdown)
 *   [Learned a tiny bit of typography](./_posts/2025-05-21-a-tiny-bit-of-typography.markdown), to make posts more readable
+*   [Tried out templating](./_posts/2025-06-08-trying-some-templating.markdown) using Jekyll
