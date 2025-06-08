@@ -48,9 +48,9 @@ GitHub have a [step by step guide for setting up Jekyll for GitHub Pages](https:
 
 The instructions say to install Bundler … but apparently [that’s part of Ruby’s standard library now](https://ruby-doc.org/3.0.5/stdlibs/bundler/Bundler.html), nothing to do here.
 
-The next step, `gem install jekyll` hits an error: in compiling some C++, I get `fatal error: 'iostream' file not found`. Looks like [others have found C++ compiler issues](https://stackoverflow.com/questions/78999694/cant-compile-c-hello-world-with-clang-on-mac-sequoia-15-0-and-vs-code) after moving to MacOS Sequoia, that’s what I’m on … tried removing and reinstalling the XCode command line tools and now `gem install jekyll` works!
+The next step, `gem install jekyll` hits an error: in compiling some C++, I get `fatal error: 'iostream' file not found`. Looks like [others have found C++ compiler issues](https://stackoverflow.com/questions/78999694/cant-compile-c-hello-world-with-clang-on-mac-sequoia-15-0-and-vs-code) after moving to MacOS Sequoia, that’s what I’m on … tried removing and reinstalling the XCode command line tools and now `gem install jekyll` works.
 
-This got all sorted very quickly, but it wasn’t obvious. It‘s the kind of minor issue that comes up all the time in tech: the exact weird error I hit is because of the exact combo of versions of my OS and the things I’m installing. It’s not in the instructions because it wasn’t happening a few months ago, and if someone comes to try this in a few more months it might be a different minor hiccup. I used to get very stuck on things like this but I feel I’ve had a lot of practice now finding ways to navigate them. Don’t let things like this put you off trying stuff!
+This got all sorted very quickly, but it wasn’t obvious. It‘s the kind of minor issue that comes up all the time in tech: the exact weird error I hit is because of the exact combo of versions of my OS and the things I’m installing. It’s not in the instructions because it wasn’t happening a few months ago, and if someone comes to try this in a few more months it might be a different minor hiccup. I used to get very stuck on things like this but I feel I’ve had a lot of practice now finding ways to navigate them. Don’t let things like this put you off trying stuff.
 
 The instructions assume I’m starting from scratch: is there a way to turn my existing site into a Jekyll-powered one? I found the [perfect blog post to answer this question](https://www.dannygarside.co.uk/blog/How-to-add-a-Jekyll-blog-to-an-existing-github-pages-website/) from Danny Garside, and [thanked them on Mastodon](https://mastodon.me.uk/@neil_vass/114312301172972903).
 
@@ -90,7 +90,7 @@ Then, I made a lucky spot: the `{% raw %}{% highlight %}{% endraw %}` tag in jek
 * This is a fairly new CSS feature, and the “Can I use” site has [stats on how well it’s supported](https://caniuse.com/css-has).
 * I’m not too practised on how to interpret those stats, but I got [helpful advice on Bluesky](https://bsky.app/profile/neil-vass.com/post/3lmmounziuc2q) and then found a lovely interactive [guide to evaluating browser support](https://www.joshwcomeau.com/css/browser-support/).
 
-This worked great on my local machine, so I checked it into GitHub … and it failed horribly!
+This worked great on my local machine, so I checked it into GitHub … and it failed horribly:
 
 {% figure caption:"Build is failing" %}
 ![Messages from GitHub saying some checks were not successful. Pages build and deployment has failed.](/assets/images/failed-github.png){:width="100%"}
@@ -102,13 +102,13 @@ After this anyone going to [neil-vass-2.com](https://neil-vass-2.com/) just gets
 ![Screenshot of the build error. A complicated looking run command with lots of command line switches, warnings about missing gems, and a liquid exception saying "unkown tag figure" on line 33.](/assets/images/github-build-error.png){:width="100%"}
 {% endfigure %}
 
-It says it can’t install a gem, and doesn’t recognize the `figure` tag I’m using. Ohh … there’s [a set of plugins in GitHub pages](https://pages.github.com/versions/), and this new one isn’t on there. But this error points to a solution: that link to https://jekyllrb.com/docs/continuous-integration/github-actions/ has a very easy guide to give me more control over things like this. Followed the steps and it’s working fine!
+It says it can’t install a gem, and doesn’t recognize the `figure` tag I’m using. Ohh … there’s [a set of plugins in GitHub pages](https://pages.github.com/versions/), and this new one isn’t on there. But this error points to a solution: that link on line 12 has [a guide to using GitHub Actions](https://jekyllrb.com/docs/continuous-integration/github-actions/) to give me more control over things like this. Followed the steps and it’s working fine!
 
 
 One more thing … relative links
 -------------------------------
 
-The files I write for each page have names like `2025-06-08-trying-some-templating.markdown`, and I’ve set Jekyll up to change that into a URL like `neil-vass-2.com/trying-some-templating/`. When I link from one page to another, I could just write the eventual URL, but I wanted to check if we can do something smarter. 
+The files I write for each page have names like `2025-06-08-trying-some-templating.markdown`, and I’ve set Jekyll up to change that into a URL like `neil-vass-2.com/trying-some-templating`. When I link from one page to another, I could just write the eventual URL, but I wanted to check if we can do something smarter. 
 
 I found a helpful guide to [URLs and links in Jekyll](https://mademistakes.com/mastering-jekyll/how-to-link/) from Michael Rose — I’m sure I’ll come back to this, there’s a lot you can choose to do. For my current question, it recommended a [jekyll-relative-links](https://github.com/benbalter/jekyll-relative-links) plugin that works nicely. I can use `../relative.markdown` links when I write pages and they get converted to the right thing when the site builds.
 
