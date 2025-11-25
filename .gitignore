@@ -5,3 +5,6 @@ _site
 vendor
 Gemfile.lock
 .DS_Store
+
+# We use node for testing JS
+node_modules/

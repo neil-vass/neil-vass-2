@@ -1,0 +1,26 @@
+.playarea {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    justify-content: center;
+    gap: 1px;
+    width: 110px;
+}
+.cell {
+    min-width: 10px;
+    min-height: 10px;
+    background-color: cadetblue;
+    cursor: pointer;
+}
+.cell:hover {
+    background-color: brown;
+}
+
+.cell.selected {
+    background-color: chartreuse;
+}
+.cell.selected:hover {
+    background-color: cadetblue;
+}
+button {
+    margin: 10px;
+}
