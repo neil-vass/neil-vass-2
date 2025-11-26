@@ -6,8 +6,16 @@
     </head>
     <body>
         <h1>Here's the page</h1>
-        <div class="playarea"></div>
-        <button type="button" id="run">run</button>
-        <button type="button" id="stop">stop</button>
-        <script src="./game-of-life.js"></script>
+        <div class="content">
+            <div class="playarea"></div>
+            <div>
+                <button type="button" id="load">load</button>
+                <button type="button" id="run">run</button>
+                <button type="button" id="stop">stop</button>
+            </div>
+            <label for="starter">Paste or type a starting setup:</label>
+            <textarea id="starter" name="starter" rows="10" cols="80"></textarea>
+        </div>
+        <script src="./game-of-life.mjs" type="module"></script>
+        
 </html>

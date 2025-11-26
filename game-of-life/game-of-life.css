@@ -1,9 +1,19 @@
+:root {
+    --cells-per-row: 80
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .playarea {
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(var(--cells-per-row), 1fr);
     justify-content: center;
     gap: 1px;
-    width: 110px;
+    width: calc(var(--cells-per-row) * 11px);
 }
 .cell {
     min-width: 10px;

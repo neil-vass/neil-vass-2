@@ -95,12 +95,10 @@ export class Field {
                     this.elvesWithNeighbours.add(elf)
                 }
             }
-            
         }
     }
 
-    // Play until elves stop moving, or until maxRounds is reached, whichever 
-    // comes first.
+    // Play until elves stop moving, or until maxRounds is reached, whichever comes first.
     play(maxRounds=null) {
         let rounds = 0
         while (true) {
@@ -120,8 +118,8 @@ export class Field {
         const elvesProposing = counter(proposals.map(([elf, dest]) => dest))
         const moves = proposals.filter(([elf, dest]) => dest !== null && elvesProposing.get(dest) === 1)
 
+        // Delete each elf and re-add it in the right position
         for (const [elf, dest] of moves) {
-            // Delete this elf and re-add it in the right position
             for (const dir of elf.neighbours) {
                 const neighbourElf = this.elves.get(elf.adjacentPositions.get(dir))
                 neighbourElf.removeNeighbour(elf)
