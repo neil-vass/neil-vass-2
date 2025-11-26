@@ -1,4 +1,5 @@
 
+
 export function parseInput(input) {
     const elves = []
     for (let x = 0; x < input.length; x++) {
@@ -9,4 +10,157 @@ export function parseInput(input) {
         }
     }
     return elves
+}
+
+// Equivalent of Python's Counter: 
+// https://docs.python.org/3/library/collections.html#collections.Counter
+export function counter(items) {
+  const counts = new Map()
+  for (const val of items) {
+    const soFar = counts.get(val) || 0
+    counts.set(val, soFar+1)
+  }
+  return counts
+}
+
+export class Elf {
+    static directionOrder = 'NSWE'
+
+    static directionChecks = {
+        'N': new Set(['N', 'NE', 'NW']),
+        'S': new Set(['S', 'SE', 'SW']),
+        'W': new Set(['W', 'NW', 'SW']),
+        'E': new Set(['E', 'NE', 'SE']),
+    }
+
+    constructor(pos) {
+        const {x,y} = JSON.parse(pos)
+        this.setPosition(x, y)
+        this.neighbours = new Set()
+    }
+
+    setPosition(x, y) {
+        this.pos = JSON.stringify({x,y})
+        this.adjacentPositions = new Map([
+            ['N',   JSON.stringify({x: x-1, y: y})],
+            ['NE',  JSON.stringify({x: x-1, y: y+1})],
+            ['E',   JSON.stringify({x: x,   y: y+1})],
+            ['SE',  JSON.stringify({x: x+1, y: y+1})],
+            ['S',   JSON.stringify({x: x+1, y: y})],
+            ['SW',  JSON.stringify({x: x+1, y: y-1})],
+            ['W',   JSON.stringify({x: x,   y: y-1})],
+            ['NW',  JSON.stringify({x: x-1, y: y-1})],
+        ])
+        this.adjacentDirections = new Map(
+            this.adjacentPositions.entries().map(([k,v]) => [v, k])
+        )
+    }
+
+    addNeighbour(elf) {
+        const dir = this.adjacentDirections.get(elf.pos)
+        this.neighbours.add(dir)
+    }
+
+    removeNeighbour(elf) {
+        const dir = this.adjacentDirections.get(elf.pos)
+        this.neighbours.delete(dir)
+    }
+
+    proposeMove(directionIdx) {
+        if (this.neighbours.size > 0) {
+            for (const _ of Elf.directionOrder) {
+                const dir = Elf.directionOrder[directionIdx]
+                if (this.neighbours.isDisjointFrom(Elf.directionChecks[dir])) {
+                    return this.adjacentPositions.get(dir)
+                }
+                directionIdx = (directionIdx+1) % Elf.directionOrder.length
+            }
+        }
+        return null
+    }
+}
+
+export class Field {
+    constructor(elfPositions) {
+        this.elves = new Map(
+            elfPositions.map(pos => [pos, new Elf(pos)])
+        )
+        this.elvesWithNeighbours = new Set()
+        for (const elf of this.elves.values()) {
+            for (const adj of elf.adjacentPositions.values()) {
+                const adjacentElf = this.elves.get(adj)
+                if (adjacentElf !== undefined) {
+                    elf.addNeighbour(adjacentElf)
+                    this.elvesWithNeighbours.add(elf)
+                }
+            }
+            
+        }
+    }
+
+    play(maxRounds=null) {
+        let rounds = 0
+        let firstDirection = 0
+        while (true) {
+            rounds++
+            const proposals = [...this.elvesWithNeighbours].map(elf => [elf, elf.proposeMove(firstDirection)])
+            const elvesProposing = counter(proposals.map(([elf, dest]) => dest))
+            const moves = proposals.filter(([elf, dest]) => dest !== null && elvesProposing.get(dest) === 1)
+
+            if (moves.length === 0) break;
+
+            for (const [elf, dest] of moves) {
+                // Delete this elf and re-add it in the right position
+                for (const dir of elf.neighbours) {
+                    const neighbourElf = this.elves.get(elf.adjacentPositions.get(dir))
+                    neighbourElf.removeNeighbour(elf)
+                    if (neighbourElf.neighbours.length === 0) {
+                        this.elvesWithNeighbours.delete(neighbourElf)
+                    }
+                }
+                this.elves.delete(elf.pos)
+                this.elvesWithNeighbours.delete(elf)
+                this.elves.set(dest, new Elf(dest))
+            }
+
+            // Set neighbours for the moved elves!
+            for (const [_, dest] of moves) {
+                const movedElf = this.elves.get(dest)
+                for (const adj of movedElf.adjacentPositions.values()) {
+                    const adjacentElf = this.elves.get(adj)
+                    if (adjacentElf !== undefined) {
+                        movedElf.addNeighbour(adjacentElf)
+                        adjacentElf.addNeighbour(movedElf)
+                        this.elvesWithNeighbours.add(movedElf)
+                        this.elvesWithNeighbours.add(adjacentElf)
+                    }
+                }
+            }
+
+            firstDirection = (firstDirection+1) % Elf.directionOrder.length
+
+            if (rounds === maxRounds) break
+        }
+
+        return rounds
+    }
+
+    emptyGround() {
+        let xMin, xMax, yMin, yMax
+        for (const pos of this.elves.keys()) {
+            const {x,y} = JSON.parse(pos)
+            if (xMin === undefined) {
+                xMin = xMax = x
+                yMin = yMax = y
+                continue
+            } 
+            if (x < xMin) xMin = x
+            if (x > xMax) xMax = x
+            if (y < yMin) yMin = y
+            if (y > yMax) yMax = y
+        }
+
+        const area = (xMax - xMin + 1) * (yMax - yMin + 1)
+        return area - this.elves.size
+    }
 }
