@@ -1,4 +1,4 @@
-import { Field } from "./model/game-model.mjs"
+import { Field } from "./model/elf-game-model.mjs"
 
 const cellsPerRow = getComputedStyle(document.documentElement).getPropertyValue("--cells-per-row")
 

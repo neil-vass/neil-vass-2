@@ -1,5 +1,5 @@
 import {expect, describe, it} from "vitest";
-import {parseInput, counter, Field} from "./game-model.mjs"
+import {parseInput, counter, Field} from "./elf-game-model.mjs"
 
 
 const smallExample = [
