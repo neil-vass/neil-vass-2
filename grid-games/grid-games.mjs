@@ -1,4 +1,4 @@
-import { Field } from "./model/elf-game-model.mjs"
+import { parseInput, Field } from "./model/elf-game-model.mjs"
 
 const cellsPerRow = getComputedStyle(document.documentElement).getPropertyValue("--cells-per-row")
 
@@ -16,9 +16,17 @@ for (let x = 0; x < cellsPerRow; x++) {
 
 
 
-
+const loadBtn = document.getElementById("load")
 const runBtn = document.getElementById("run")
 const stopBtn = document.getElementById("stop")
+
+loadBtn.onclick = () => {
+    const text = document.getElementById("starter").value
+    const lines = text.match(/.+/g)
+    for (const pos of parseInput(lines)) {
+        document.getElementById(pos).classList.add("selected")
+    }
+}
 
 runBtn.onclick = () => {
     init()
@@ -29,6 +37,7 @@ runBtn.onclick = () => {
         runBtn.disabled = false
     }
 }
+
 
 let model
 
@@ -46,9 +55,11 @@ function runSimulation() {
     }
 
     for (const a of changes.added) {
-        document.getElementById(a).classList.add("selected")
+        const cell = document.getElementById(a)
+        if (cell !== null) cell.classList.add("selected")
     }
     for (const r of changes.removed) {
-        document.getElementById(r).classList.remove("selected")
+        const cell = document.getElementById(r)
+        if (cell !== null) cell.classList.remove("selected")
     }
 }
