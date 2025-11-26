@@ -105,8 +105,8 @@ export class Field {
         let rounds = 0
         while (true) {
             rounds++
-            const moves = this.playRound()
-            if (moves.length === 0) break
+            const changes = this.playRound()
+            if (changes.added.size === 0 && changes.removed.size === 0) break
             if (rounds === maxRounds) break
         }
 
@@ -114,6 +114,8 @@ export class Field {
     }
 
     playRound() {
+        const changes = { added: new Set(), removed: new Set() }
+
         const proposals = [...this.elvesWithNeighbours].map(elf => [elf, elf.proposeMove(this.firstDirection)])
         const elvesProposing = counter(proposals.map(([elf, dest]) => dest))
         const moves = proposals.filter(([elf, dest]) => dest !== null && elvesProposing.get(dest) === 1)
@@ -129,7 +131,10 @@ export class Field {
             }
             this.elves.delete(elf.pos)
             this.elvesWithNeighbours.delete(elf)
+            changes.removed.add(elf.pos)
+
             this.elves.set(dest, new Elf(dest))
+            changes.added.add(dest)
         }
 
         // Set neighbours for the moved elves!
@@ -147,7 +152,7 @@ export class Field {
         }
 
         this.firstDirection = (this.firstDirection+1) % Elf.directionOrder.length
-        return moves
+        return changes
     }
 
     emptyGround() {
