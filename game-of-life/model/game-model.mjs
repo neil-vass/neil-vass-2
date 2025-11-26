@@ -82,6 +82,7 @@ export class Elf {
 
 export class Field {
     constructor(elfPositions) {
+        this.firstDirection = 0
         this.elves = new Map(
             elfPositions.map(pos => [pos, new Elf(pos)])
         )
@@ -98,51 +99,55 @@ export class Field {
         }
     }
 
+    // Play until elves stop moving, or until maxRounds is reached, whichever 
+    // comes first.
     play(maxRounds=null) {
         let rounds = 0
-        let firstDirection = 0
         while (true) {
             rounds++
-            const proposals = [...this.elvesWithNeighbours].map(elf => [elf, elf.proposeMove(firstDirection)])
-            const elvesProposing = counter(proposals.map(([elf, dest]) => dest))
-            const moves = proposals.filter(([elf, dest]) => dest !== null && elvesProposing.get(dest) === 1)
-
-            if (moves.length === 0) break;
-
-            for (const [elf, dest] of moves) {
-                // Delete this elf and re-add it in the right position
-                for (const dir of elf.neighbours) {
-                    const neighbourElf = this.elves.get(elf.adjacentPositions.get(dir))
-                    neighbourElf.removeNeighbour(elf)
-                    if (neighbourElf.neighbours.length === 0) {
-                        this.elvesWithNeighbours.delete(neighbourElf)
-                    }
-                }
-                this.elves.delete(elf.pos)
-                this.elvesWithNeighbours.delete(elf)
-                this.elves.set(dest, new Elf(dest))
-            }
-
-            // Set neighbours for the moved elves!
-            for (const [_, dest] of moves) {
-                const movedElf = this.elves.get(dest)
-                for (const adj of movedElf.adjacentPositions.values()) {
-                    const adjacentElf = this.elves.get(adj)
-                    if (adjacentElf !== undefined) {
-                        movedElf.addNeighbour(adjacentElf)
-                        adjacentElf.addNeighbour(movedElf)
-                        this.elvesWithNeighbours.add(movedElf)
-                        this.elvesWithNeighbours.add(adjacentElf)
-                    }
-                }
-            }
-
-            firstDirection = (firstDirection+1) % Elf.directionOrder.length
-
+            const moves = this.playRound()
+            if (moves.length === 0) break
             if (rounds === maxRounds) break
         }
 
         return rounds
+    }
+
+    playRound() {
+        const proposals = [...this.elvesWithNeighbours].map(elf => [elf, elf.proposeMove(this.firstDirection)])
+        const elvesProposing = counter(proposals.map(([elf, dest]) => dest))
+        const moves = proposals.filter(([elf, dest]) => dest !== null && elvesProposing.get(dest) === 1)
+
+        for (const [elf, dest] of moves) {
+            // Delete this elf and re-add it in the right position
+            for (const dir of elf.neighbours) {
+                const neighbourElf = this.elves.get(elf.adjacentPositions.get(dir))
+                neighbourElf.removeNeighbour(elf)
+                if (neighbourElf.neighbours.length === 0) {
+                    this.elvesWithNeighbours.delete(neighbourElf)
+                }
+            }
+            this.elves.delete(elf.pos)
+            this.elvesWithNeighbours.delete(elf)
+            this.elves.set(dest, new Elf(dest))
+        }
+
+        // Set neighbours for the moved elves!
+        for (const [_, dest] of moves) {
+            const movedElf = this.elves.get(dest)
+            for (const adj of movedElf.adjacentPositions.values()) {
+                const adjacentElf = this.elves.get(adj)
+                if (adjacentElf !== undefined) {
+                    movedElf.addNeighbour(adjacentElf)
+                    adjacentElf.addNeighbour(movedElf)
+                    this.elvesWithNeighbours.add(movedElf)
+                    this.elvesWithNeighbours.add(adjacentElf)
+                }
+            }
+        }
+
+        this.firstDirection = (this.firstDirection+1) % Elf.directionOrder.length
+        return moves
     }
 
     emptyGround() {
