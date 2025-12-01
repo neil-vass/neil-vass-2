@@ -1,7 +1,6 @@
 import { parseInput, Field } from "./model/elf-game-model.mjs"
 
 const cellsPerRow = getComputedStyle(document.documentElement).getPropertyValue("--cells-per-row")
-
 const playarea = document.getElementsByClassName("playarea")[0]
 
 for (let x = 0; x < cellsPerRow; x++) {
@@ -19,10 +18,14 @@ for (let x = 0; x < cellsPerRow; x++) {
 const loadBtn = document.getElementById("load")
 const runBtn = document.getElementById("run")
 const stopBtn = document.getElementById("stop")
+const framerateSlider = document.getElementById("framerateSlider")
+const clearBtn = document.getElementById("clear")
+let framerate = 5
 
 loadBtn.onclick = () => {
     const text = document.getElementById("starter").value
     const lines = text.match(/.+/g)
+    console.log(lines)
     for (const pos of parseInput(lines)) {
         document.getElementById(pos).classList.add("selected")
     }
@@ -30,26 +33,43 @@ loadBtn.onclick = () => {
 
 runBtn.onclick = () => {
     init()
-    const intervalId = setInterval(runSimulation, 200)
+    const intervalId = setInterval(runSimulation, 1000/framerate)
     runBtn.disabled = true
+    framerateSlider.disabled = true
     stopBtn.onclick = () => {
         clearInterval(intervalId)
         runBtn.disabled = false
+        framerateSlider.disabled = false
+    }
+}
+
+framerateSlider.value = framerate
+framerateSlider.oninput = () => {
+    framerate = framerateSlider.value
+}
+
+clearBtn.onclick = () => {
+    stopBtn.click()
+    for (const cell of document.querySelectorAll(".selected")) {
+        cell.classList.remove("selected")
     }
 }
 
 
 let model
+let rounds
 
 function init() {
     const initialPositions = [...document.getElementsByClassName("selected")].map(cell => cell.id)
     model = new Field(initialPositions)
+    rounds = 0
 }
 
 function runSimulation() {
     const changes = model.playRound()
+    rounds++
     if (changes.added.size === 0 && changes.removed.size === 0) {
-        alert("Finished!")
+        alert("First round where no elf moved: " + rounds)
         stopBtn.click()
         return
     }

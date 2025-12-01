@@ -1,20 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="stylesheet" href="../assets/css/styles.css"/>
         <link rel="stylesheet" href="./grid-games.css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <div class="content">
-            <h1>Here's the page</h1>
-            <div class="playarea"></div>
+            <h1>Grid games</h1>
+            <p>I’m working on a visualisation for <a href="https://adventofcode.com/2022/day/23">Advent of Code 2022, day 23: Unstable Diffusion</a>.
+            It’s a little similar to Conway’s Game of Life. I’ve written a bit about my approach here: 
+            <a href="https://neil-vass.com/optimising-life-with-advice-from-quake/">https://neil-vass.com/optimising-life-with-advice-from-quake/</a>.
+            This page lets you set up the game, tweak how it runs, and get answers.</p>
+
             <div>
+                <label for="starter">On the grid below, you can click cells to add and remove elves, or paste in one of the examples or a puzzle input and load it all in at once:</label>
                 <button type="button" id="load">load</button>
+                <textarea id="starter" name="starter" rows="10" cols="80"></textarea>
+            </div>
+            <div>
+                <label for="run">When you’re ready, you can: </label>
                 <button type="button" id="run">run</button>
+            </div>
+            <div>
+                <label for="stop">Taking too long? </label>
                 <button type="button" id="stop">stop</button>
             </div>
-            <label for="starter">Paste or type a starting setup:</label>
-            <textarea id="starter" name="starter" rows="10" cols="80"></textarea>
+            <div>
+                <label for="framerateSlider">You can adjust the rounds per second: </label>
+                <input type="range" id="framerateSlider" name="framerateSlider" min="1" max="100" />
+            </div>
+            <div>
+                <label for="clear">Want to start again? </label>
+                <button type="button" id="clear">clear</button>
+            </div>
+
+            <div class="playarea"></div>
+            
+            
         </div>
         <script src="./grid-games.mjs" type="module"></script>
         
